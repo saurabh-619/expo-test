@@ -37,7 +37,15 @@ jobs:
        uses: actions/upload-artifact@v2
        with:
          name: android-apk
-         path: release/android/app-release.apk
+         path: android/app/build/outputs/apk/release/app-release.apk
+
+     - name: Upload APK to Google Play
+       uses: r0adkll/upload-google-play@v1
+       with:
+        serviceAccountJsonPlainText: ${{ secrets.SERVICE_ACCOUNT_JSON }}
+        packageName: ${{ secrets.PACKAGE_NAME }}
+        releaseFile: android/app/build/outputs/apk/release/app-release.apk
+        track: internal  # or alpha, beta, production
 
   build-ios:
    runs-on: macos-latest
