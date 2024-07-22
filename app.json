@@ -14,14 +14,14 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.saurabhbomble.expo_test"
+      "bundleIdentifier": "com.saurabhbomble.expo.test"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.saurabhbomble.expo_test",
+      "package": "com.saurabhbomble.expo.test",
       "versionCode": 1
     },
     "web": {
