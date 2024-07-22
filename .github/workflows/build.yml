@@ -44,8 +44,8 @@ jobs:
        with:
         serviceAccountJsonPlainText: ${{ secrets.SERVICE_ACCOUNT_JSON }}
         packageName: ${{ secrets.PACKAGE_NAME }}
-        releaseFile: android/app/build/outputs/apk/release/app-release.apk
-        track: internal  # or alpha, beta, production
+        releaseFiles: android/app/build/outputs/apk/release/app-release.apk
+        track: internal
 
   build-ios:
    runs-on: macos-latest
