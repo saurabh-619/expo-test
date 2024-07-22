@@ -63,7 +63,7 @@ jobs:
      - name: Build iOS 
        run: |
          cd ios
-         xcodebuild -workspace test.xcworkspace -scheme test -configuration Release -sdk iphoneos -archivePath $PWD/build/test.xcarchive archive
+         xcodebuild -workspace test.xcworkspace -scheme test -configuration Release -sdk iphoneos -allowProvisioningUpdates archive -archivePath $PWD/build/test.xcarchive
          xcodebuild -exportArchive -archivePath $PWD/build/test.xcarchive -exportOptionsPlist $PWD/build/exportOptions.plist -exportPath $PWD/build
 
      - name: Upload IPA
